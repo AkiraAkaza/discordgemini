@@ -4,11 +4,6 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const { Client, GatewayIntentBits } = require("discord.js");
 const { exec } = require('child_process');
 
-exec('npm install dotenv')
-exec('npm install moment-timezone')
-exec('npm install express')
-exec('npm install child_process')
-
 const MODEL = "gemini-pro";
 const API_KEY = process.env.API_KEY
 const BOT_TOKEN = process.env.BOT_TOKEN;
