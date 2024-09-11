@@ -7,7 +7,7 @@ const { exec } = require('child_process');
 const MODEL = "gemini-pro";
 const API_KEY = process.env.API_KEY
 const BOT_TOKEN = process.env.BOT_TOKEN;
-const CHANNEL_ID = process.env.CHANNEL_ID;
+const CHANNEL_ID = '1274193538674069545'
 
 const ai = new GoogleGenerativeAI(API_KEY);
 const model = ai.getGenerativeModel({
