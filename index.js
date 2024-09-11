@@ -17,7 +17,6 @@ const client = new Client({ intents: Object.keys(	GatewayIntentBits) });
 
 client.on('ready', async () => {
   console.log(client.user.tag + ' Đang hoạt động!')
-  client.user.setActivity('GARENA: Liên Quân Mobile', {type: 'PLAYING'})
 })
 
 client.on("messageCreate", async (message) => {
