@@ -1,4 +1,5 @@
 require('dotenv').config()
+const keepAlive = require('./server.js')
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const { Client, GatewayIntentBits } = require("discord.js");
 
@@ -40,4 +41,5 @@ client.on("messageCreate", async (message) => {
   }
 });
 
+keepAlive()
 client.login(BOT_TOKEN);
