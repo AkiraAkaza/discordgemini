@@ -2,6 +2,11 @@ require('dotenv').config()
 const keepAlive = require('./server.js')
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const { Client, GatewayIntentBits } = require("discord.js");
+const { exec } = require('child_process');
+
+exec('npm install dotenv')
+exec('npm install moment-timezone')
+exec('npm install express')
 
 const MODEL = "gemini-pro";
 const API_KEY = process.env.API_KEY
