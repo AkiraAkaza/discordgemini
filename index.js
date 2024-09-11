@@ -16,9 +16,17 @@ const model = ai.getGenerativeModel({
 
 const client = new Client({ intents: Object.keys(	GatewayIntentBits) });
 
-client.on('ready', async () => {
-  console.log(client.user.tag + ' Đang hoạt động!')
-})
+ client.once('ready', () => {
+    console.log(`Logged in as ${client.user.tag}`);
+
+    client.user.setPresence({
+        activities: [{
+            name: 'https://www.youtube.com/@akiraakaza.',
+            type: ActivityType.Streaming, // Có thể là Playing, Streaming, Listening, Watching
+        }],
+        status: 'idle' // Các trạng thái có thể là online, idle, dnd, invisible
+    })
+}); 
 
 client.on("messageCreate", async (message) => {
   try {
